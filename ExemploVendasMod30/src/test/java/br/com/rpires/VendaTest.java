@@ -26,6 +26,7 @@ public class VendaTest {
 
         produto = new Produto();
         produto.setCodigo("P01");
+        produto.setMarca("Marca Teste");
         produto.setNome("Produto Teste");
         produto.setValor(BigDecimal.TEN);
     }

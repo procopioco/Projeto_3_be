@@ -51,6 +51,7 @@ public class ProdutoDAOTest {
 		Produto produto = new Produto();
 		produto.setCodigo(codigo);
 		produto.setDescricao("Produto 1");
+		produto.setMarca("Marca Teste");
 		produto.setNome("Produto 1");
 		produto.setValor(BigDecimal.TEN);
 		produtoDao.cadastrar(produto);
@@ -67,6 +68,7 @@ public class ProdutoDAOTest {
 		Assert.assertNotNull(produto);
 		Produto produtoDB = this.produtoDao.consultar(produto.getCodigo());
 		Assert.assertNotNull(produtoDB);
+		Assert.assertEquals("Marca Teste", produtoDB.getMarca());
 		excluir(produtoDB.getCodigo());
 	}
 	

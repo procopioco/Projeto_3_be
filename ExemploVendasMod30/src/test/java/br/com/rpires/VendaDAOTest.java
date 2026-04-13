@@ -290,6 +290,7 @@ public class VendaDAOTest {
 		Produto produto = new Produto();
 		produto.setCodigo(codigo);
 		produto.setDescricao("Produto 1");
+		produto.setMarca("Marca " + codigo);
 		produto.setNome("Produto 1");
 		produto.setValor(valor);
 		produtoDao.cadastrar(produto);

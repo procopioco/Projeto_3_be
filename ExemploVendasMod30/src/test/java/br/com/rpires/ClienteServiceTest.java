@@ -38,11 +38,9 @@ public class ClienteServiceTest {
 		cliente.setCidade("São Paulo");
 		cliente.setEnd("End");
 		cliente.setEstado("SP");
-		cliente.setNumero(10);
-		cliente.setTel(1199999999L);
-		
+		cliente.setEmail("rodrigo@example.com");
 	}
-	
+
 	@Test
 	public void pesquisarCliente() throws DAOException {
 		Cliente clienteConsultado = clienteService.buscarPorCPF(cliente.getCpf());
